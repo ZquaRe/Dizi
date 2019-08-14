@@ -2,22 +2,151 @@
 <html lang="en">
 
 <head>
-<?php   $this->load->view("{$this->theme}/include/head"); ?>
-<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/photoswipe.css">
+	<link rel="stylesheet" href="css/default-skin.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Dmitry Volkov">
+	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
 
 </head>
 <body class="body">
+	
+	<!-- header -->
+	<header class="header">
+		<div class="header__wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header__content">
+							<!-- header logo -->
+							<a href="index.html" class="header__logo">
+								<img src="img/logo.svg" alt="">
+							</a>
+							<!-- end header logo -->
 
+							<!-- header nav -->
+							<ul class="header__nav">
+								<!-- dropdown -->
+								<li class="header__nav-item">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
 
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+										<li><a href="index.html">Home slideshow bg</a></li>
+										<li><a href="index2.html">Home static bg</a></li>
+									</ul>
+								</li>
+								<!-- end dropdown -->
 
+								<!-- dropdown -->
+								<li class="header__nav-item">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
 
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+										<li><a href="catalog1.html">Catalog Grid</a></li>
+										<li><a href="catalog2.html">Catalog List</a></li>
+										<li><a href="details1.html">Details Movie</a></li>
+										<li><a href="details2.html">Details TV Series</a></li>
+									</ul>
+								</li>
+								<!-- end dropdown -->
 
-<?php   $this->load->view("{$this->theme}/include/menu"); ?>
+								<li class="header__nav-item">
+									<a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+								</li>
+
+								<li class="header__nav-item">
+									<a href="faq.html" class="header__nav-link">Help</a>
+								</li>
+
+								<!-- dropdown -->
+								<li class="dropdown header__nav-item">
+									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+										<li><a href="about.html">About</a></li>
+										<li><a href="signin.html">Sign In</a></li>
+										<li><a href="signup.html">Sign Up</a></li>
+										<li><a href="404.html">404 Page</a></li>
+									</ul>
+								</li>
+								<!-- end dropdown -->
+							</ul>
+							<!-- end header nav -->
+
+							<!-- header auth -->
+							<div class="header__auth">
+								<button class="header__search-btn" type="button">
+									<i class="icon ion-ios-search"></i>
+								</button>
+
+								<a href="signin.html" class="header__sign-in">
+									<i class="icon ion-ios-log-in"></i>
+									<span>sign in</span>
+								</a>
+							</div>
+							<!-- end header auth -->
+
+							<!-- header menu btn -->
+							<button class="header__btn" type="button">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+							<!-- end header menu btn -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- header search -->
+		<form action="#" class="header__search">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header__search-content">
+							<input type="text" placeholder="Search for a movie, TV Series that you are looking for">
+
+							<button type="button">search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!-- end header search -->
+	</header>
+	<!-- end header -->
 
 	<!-- details -->
 	<section class="section details">
 		<!-- details background -->
-		<div class="details__bg" data-bg="<?php echo base_url("assets/{$this->theme}/");?>img/home/home__bg.jpg"></div>
+		<div class="details__bg" data-bg="img/home/home__bg.jpg"></div>
 		<!-- end details background -->
 
 		<!-- details content -->
@@ -25,9 +154,12 @@
 			<div class="row">
 				<!-- title -->
 				<div class="col-12">
-					<h1 class="details__title">I Dream in Another Language
-						<span style="float: right;font-size:20px; font-weight: 500;"><img src="https://flixgo.co/templates/FlixGo/img/icons/imd.svg"> <span>8.9</span></span>
-					</h1>
+					<h1 class="details__title">I Dream in Another Language 
+						<span style="float: right;
+font-size:20px;
+  font-weight: 500;
+
+						"><img src="https://flixgo.co/templates/FlixGo/img/icons/imd.svg"> <span>8.9</span></span></h1>
 				</div>
 				<!-- end title -->
 
@@ -38,12 +170,12 @@
 							<!-- card cover -->
 							<div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-5">
 								<div class="card__cover">
-									<img src="<?php echo base_url("assets/{$this->theme}/");?>img/covers/cover.jpg" alt="">
+									<img src="img/covers/cover.jpg" alt="">
 								</div>
-									<a href="" style="position: relative; top: 0; margin-top:10px; font-family: 'Oswald', sans-serif;
-									" class="film__watch">İzlemeye Başla
-									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M395.335,1116a1.674,1.674,0,0,1-.668-0.16,1.26,1.26,0,0,1-.668-1.15v-13.38a1.358,1.358,0,0,1,.668-1.14,1.307,1.307,0,0,1,1.337.03l11.359,6.69A1.266,1.266,0,0,1,408,1108a1.282,1.282,0,0,1-.635,1.12L396,1115.8A1.238,1.238,0,0,1,395.335,1116Zm1.337-12.36v8.75l7.417-4.39Z" transform="translate(-394 -1100)"></path></svg>
-									</a>
+								<a href="" style="position: relative; top: 0; margin-top:10px; font-family: 'Oswald', sans-serif;
+" class="film__watch">Watch Now
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M395.335,1116a1.674,1.674,0,0,1-.668-0.16,1.26,1.26,0,0,1-.668-1.15v-13.38a1.358,1.358,0,0,1,.668-1.14,1.307,1.307,0,0,1,1.337.03l11.359,6.69A1.266,1.266,0,0,1,408,1108a1.282,1.282,0,0,1-.635,1.12L396,1115.8A1.238,1.238,0,0,1,395.335,1116Zm1.337-12.36v8.75l7.417-4.39Z" transform="translate(-394 -1100)"></path></svg></a>
+
 							</div>
 							<!-- end card cover -->
 
@@ -80,15 +212,17 @@
 
 				<!-- player -->
 				<div class="col-12 col-xl-6">
-					<video controls crossorigin playsinline poster="http://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
+
+
+					<video controls crossorigin playsinline poster="../../../cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
 						<!-- Video files -->
-						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
-						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+						<source src="https://oload.vip/stream/vVmbEbYRBIY~1565866713~78.182.0.0~dNYwF1sw?mime=true"  type="video/mp4" >
+						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="240">
 						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
 						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
 
 						<!-- Caption files -->
-						<track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+						<track kind="captions" label="Türkçe" srclang="tr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
 						    default>
 						<track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
 
@@ -191,17 +325,10 @@
 								<!-- comments -->
 								<div class="col-12">
 									<div class="comments">
-									<div class="alert fsize alert-gradient">
-Yorum yapabilmeniz için giriş yapmanız gerekiyor.
-</div>
-													<form action="#" class="form" style="margin-bottom:30px;">
-											<textarea id="text" name="text" class="form__textarea" placeholder="Add comment"></textarea>
-											<button type="button" class="form__btn">Send</button>
-										</form>
 										<ul class="comments__list">
 											<li class="comments__item">
 												<div class="comments__autor">
-													<img class="comments__avatar" src="<?php echo base_url("assets/{$this->theme}/");?>img/user.png" alt="">
+													<img class="comments__avatar" src="img/user.png" alt="">
 													<span class="comments__name">John Doe</span>
 													<span class="comments__time">30.08.2018, 17:53</span>
 												</div>
@@ -220,7 +347,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 											<li class="comments__item comments__item--answer">
 												<div class="comments__autor">
-													<img class="comments__avatar" src="<?php echo base_url("assets/{$this->theme}/");?>img/user.png" alt="">
+													<img class="comments__avatar" src="img/user.png" alt="">
 													<span class="comments__name">John Doe</span>
 													<span class="comments__time">24.08.2018, 16:41</span>
 												</div>
@@ -239,7 +366,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 											<li class="comments__item comments__item--quote">
 												<div class="comments__autor">
-													<img class="comments__avatar" src="<?php echo base_url("assets/{$this->theme}/");?>img/user.png" alt="">
+													<img class="comments__avatar" src="img/user.png" alt="">
 													<span class="comments__name">John Doe</span>
 													<span class="comments__time">11.08.2018, 11:11</span>
 												</div>
@@ -258,7 +385,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 											<li class="comments__item">
 												<div class="comments__autor">
-													<img class="comments__avatar" src="<?php echo base_url("assets/{$this->theme}/");?>img/user.png" alt="">
+													<img class="comments__avatar" src="img/user.png" alt="">
 													<span class="comments__name">John Doe</span>
 													<span class="comments__time">07.08.2018, 14:33</span>
 												</div>
@@ -277,7 +404,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 											<li class="comments__item">
 												<div class="comments__autor">
-													<img class="comments__avatar" src="<?php echo base_url("assets/{$this->theme}/");?>img/user.png" alt="">
+													<img class="comments__avatar" src="img/user.png" alt="">
 													<span class="comments__name">John Doe</span>
 													<span class="comments__time">02.08.2018, 15:24</span>
 												</div>
@@ -294,6 +421,11 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 												</div>
 											</li>
 										</ul>
+
+										<form action="#" class="form">
+											<textarea id="text" name="text" class="form__textarea" placeholder="Add comment"></textarea>
+											<button type="button" class="form__btn">Send</button>
+										</form>
 									</div>
 								</div>
 								<!-- end comments -->
@@ -308,7 +440,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 										<ul class="reviews__list">
 											<li class="reviews__item">
 												<div class="reviews__autor">
-													<img class="reviews__avatar" src="<?php echo base_url("assets/{$this->theme}/");?>img/user.png" alt="">
+													<img class="reviews__avatar" src="img/user.png" alt="">
 													<span class="reviews__name">Best Marvel movie in my opinion</span>
 													<span class="reviews__time">24.08.2018, 17:53 by John Doe</span>
 
@@ -319,7 +451,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 											<li class="reviews__item">
 												<div class="reviews__autor">
-													<img class="reviews__avatar" src="<?php echo base_url("assets/{$this->theme}/");?>img/user.png" alt="">
+													<img class="reviews__avatar" src="img/user.png" alt="">
 													<span class="reviews__name">Best Marvel movie in my opinion</span>
 													<span class="reviews__time">24.08.2018, 17:53 by John Doe</span>
 
@@ -330,7 +462,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 											<li class="reviews__item">
 												<div class="reviews__autor">
-													<img class="reviews__avatar" src="<?php echo base_url("assets/{$this->theme}/");?>img/user.png" alt="">
+													<img class="reviews__avatar" src="img/user.png" alt="">
 													<span class="reviews__name">Best Marvel movie in my opinion</span>
 													<span class="reviews__time">24.08.2018, 17:53 by John Doe</span>
 
@@ -361,8 +493,8 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 								<div class="row">
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
-										<a href="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-1.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-1.jpg" itemprop="thumbnail" alt="Image description" />
+										<a href="img/gallery/project-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+											<img src="img/gallery/project-1.jpg" itemprop="thumbnail" alt="Image description" />
 										</a>
 										<figcaption itemprop="caption description">Some image caption 1</figcaption>
 									</figure>
@@ -370,8 +502,8 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
-										<a href="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-2.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-2.jpg" itemprop="thumbnail" alt="Image description" />
+										<a href="img/gallery/project-2.jpg" itemprop="contentUrl" data-size="1920x1280">
+											<img src="img/gallery/project-2.jpg" itemprop="thumbnail" alt="Image description" />
 										</a>
 										<figcaption itemprop="caption description">Some image caption 2</figcaption>
 									</figure>
@@ -379,8 +511,8 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
-										<a href="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-3.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-3.jpg" itemprop="thumbnail" alt="Image description" />
+										<a href="img/gallery/project-3.jpg" itemprop="contentUrl" data-size="1920x1280">
+											<img src="img/gallery/project-3.jpg" itemprop="thumbnail" alt="Image description" />
 										</a>
 										<figcaption itemprop="caption description">Some image caption 3</figcaption>
 									</figure>
@@ -388,8 +520,8 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
-										<a href="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-4.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-4.jpg" itemprop="thumbnail" alt="Image description" />
+										<a href="img/gallery/project-4.jpg" itemprop="contentUrl" data-size="1920x1280">
+											<img src="img/gallery/project-4.jpg" itemprop="thumbnail" alt="Image description" />
 										</a>
 										<figcaption itemprop="caption description">Some image caption 4</figcaption>
 									</figure>
@@ -397,8 +529,8 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
-										<a href="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-5.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-5.jpg" itemprop="thumbnail" alt="Image description" />
+										<a href="img/gallery/project-5.jpg" itemprop="contentUrl" data-size="1920x1280">
+											<img src="img/gallery/project-5.jpg" itemprop="thumbnail" alt="Image description" />
 										</a>
 										<figcaption itemprop="caption description">Some image caption 5</figcaption>
 									</figure>
@@ -406,8 +538,8 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
-										<a href="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-6.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="<?php echo base_url("assets/{$this->theme}/");?>img/gallery/project-6.jpg" itemprop="thumbnail" alt="Image description" />
+										<a href="img/gallery/project-6.jpg" itemprop="contentUrl" data-size="1920x1280">
+											<img src="img/gallery/project-6.jpg" itemprop="thumbnail" alt="Image description" />
 										</a>
 										<figcaption itemprop="caption description">Some image caption 6</figcaption>
 									</figure>
@@ -433,7 +565,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 						<div class="col-6 col-sm-4 col-lg-6">
 							<div class="card">
 								<div class="card__cover">
-									<img src="<?php echo base_url("assets/{$this->theme}/");?>img/covers/cover.jpg" alt="">
+									<img src="img/covers/cover.jpg" alt="">
 									<a href="#" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a>
@@ -454,7 +586,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 						<div class="col-6 col-sm-4 col-lg-6">
 							<div class="card">
 								<div class="card__cover">
-									<img src="<?php echo base_url("assets/{$this->theme}/");?>img/covers/cover2.jpg" alt="">
+									<img src="img/covers/cover2.jpg" alt="">
 									<a href="#" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a>
@@ -474,7 +606,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 						<div class="col-6 col-sm-4 col-lg-6">
 							<div class="card">
 								<div class="card__cover">
-									<img src="<?php echo base_url("assets/{$this->theme}/");?>img/covers/cover3.jpg" alt="">
+									<img src="img/covers/cover3.jpg" alt="">
 									<a href="#" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a>
@@ -496,7 +628,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 						<div class="col-6 col-sm-4 col-lg-6">
 							<div class="card">
 								<div class="card__cover">
-									<img src="<?php echo base_url("assets/{$this->theme}/");?>img/covers/cover4.jpg" alt="">
+									<img src="img/covers/cover4.jpg" alt="">
 									<a href="#" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a>
@@ -517,7 +649,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 						<div class="col-6 col-sm-4 col-lg-6">
 							<div class="card">
 								<div class="card__cover">
-									<img src="<?php echo base_url("assets/{$this->theme}/");?>img/covers/cover5.jpg" alt="">
+									<img src="img/covers/cover5.jpg" alt="">
 									<a href="#" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a>
@@ -538,7 +670,7 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 						<div class="col-6 col-sm-4 col-lg-6">
 							<div class="card">
 								<div class="card__cover">
-									<img src="<?php echo base_url("assets/{$this->theme}/");?>img/covers/cover6.jpg" alt="">
+									<img src="img/covers/cover6.jpg" alt="">
 									<a href="#" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a>
@@ -561,8 +693,75 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 	</section>
 	<!-- end content -->
 
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<!-- footer list -->
+				<div class="col-12 col-md-3">
+					<h6 class="footer__title">Download Our App</h6>
+					<ul class="footer__app">
+						<li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
+						<li><a href="#"><img src="img/google-play-badge.png" alt=""></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
 
-<?php // Galeri ?>
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Resources</h6>
+					<ul class="footer__list">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Pricing Plan</a></li>
+						<li><a href="#">Help</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Legal</h6>
+					<ul class="footer__list">
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Security</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-12 col-sm-4 col-md-3">
+					<h6 class="footer__title">Contact</h6>
+					<ul class="footer__list">
+						<li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
+						<li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+					</ul>
+					<ul class="footer__social">
+						<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+						<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+						<li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+						<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer copyright -->
+				<div class="col-12">
+					<div class="footer__copyright">
+						<small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
+
+						<ul>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- end footer copyright -->
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+
 	<!-- Root element of PhotoSwipe. Must have class pswp. -->
 	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
@@ -615,15 +814,19 @@ Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 		</div>
 	</div>
 
-
-<?php   $this->load->view("{$this->theme}/include/footer"); ?>
-
-<?php   $this->load->view("{$this->theme}/include/js"); ?>
-
-
-
-
-
+	<!-- JS -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/wNumb.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/plyr.min.js"></script>
+	<script src="js/jquery.morelines.min.js"></script>
+	<script src="js/photoswipe.min.js"></script>
+	<script src="js/photoswipe-ui-default.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

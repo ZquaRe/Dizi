@@ -346,6 +346,18 @@
 								<!-- comments -->
 								<div class="col-12">
 									<div class="comments">
+
+									<div class="alert fsize alert-warning">
+Yorum yapabilmeniz için giriş yapmanız gerekiyor.
+</div>
+
+									<div class="alert fsize alert-danger">
+Yorum yapabilmeniz için giriş yapmanız gerekiyor.
+</div>
+
+									<div class="alert fsize alert-success">
+Yorum yapabilmeniz için giriş yapmanız gerekiyor.
+</div>
 									<div class="alert fsize alert-gradient">
 Yorum yapabilmeniz için giriş yapmanız gerekiyor.
 </div>
