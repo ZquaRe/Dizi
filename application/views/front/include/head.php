@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/main.css">
 
 	<!-- Favicons -->
-	<link rel="icon" type="<?php echo base_url("assets/{$this->theme}/");?>image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="<?php echo base_url("assets/{$this->theme}/");?>icon/favicon-32x32.png" sizes="32x32">
 	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url("assets/{$this->theme}/");?>icon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url("assets/{$this->theme}/");?>icon/apple-touch-icon-114x114.png">
