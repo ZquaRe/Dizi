@@ -26,8 +26,14 @@
 				<!-- title -->
 				<div class="col-12">
 					<h1 class="details__title">I Dream in Another Language
-						<span style="float: right;font-size:20px; font-weight: 500;"><img src="https://flixgo.co/templates/FlixGo/img/icons/imd.svg"> <span>8.9</span></span>
+						<span style="float: right;font-size:20px; font-weight: 500;"><img src="<?php echo base_url("assets/{$this->theme}/");?>icon/imd.svg"> <span>8.9</span></span>
 					</h1>
+					<button class="pure-button button-sdark btn-size-sm margin20 margint15 btn-radius50" >Dizi</button>
+					<button class="pure-button button-sdark btn-size-sm margin20 margint15 btn-radius50" >Kanun</button>
+					<button class="pure-button button-sdark btn-size-sm margin20 margint15 btn-radius50" >Polisiye</button>
+					<button class="pure-button button-sdark btn-size-sm margin20 margint15 btn-radius50" >Aksiyon</button>
+
+
 				</div>
 				<!-- end title -->
 
@@ -51,11 +57,19 @@
 							<div class="col-12 col-sm-8 col-md-8 col-lg-9 col-xl-7">
 								<div class="card__content">
 									<div class="card__wrap">
-										<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+
+										<?php //<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span> ?>
+										<span class="card__rate"><img src="<?php echo base_url("assets/{$this->theme}/");?>icon/imd.svg" style="width:44px; height:25px; margin-right:4px;">
+										<span style="margin-right:-2px;"> sa </span>
+									</span>
+											
+
 
 										<ul class="card__list">
 											<li>HD</li>
 											<li>16+</li>
+											<li><span class="fas fa-eye" style="color:#97999E;"></span> 200</li>
+											<li><span class="fas fa-comments" style="color:#97999E;"></span> 200</li>
 										</ul>
 									</div>
 

@@ -1,6 +1,7 @@
 	<!-- footer -->
 	<footer class="footer">
 		<div class="container">
+		<?php /*
 				<!-- partners -->
 				<section class="section">
 					<div class="container">
@@ -69,6 +70,7 @@
 				</section>
 				<!-- end partners -->	
 
+				*/ ?>
 
 			<div class="row">
 				<!-- footer list -->

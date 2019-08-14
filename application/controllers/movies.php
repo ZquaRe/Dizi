@@ -14,6 +14,11 @@ class movies extends CI_Controller {
         $this->theme = "front";
     }
 
+    public function index()
+    {
+        $this->load->view("{$this->theme}/{$this->viewFolder}/index");
+    }
+
     public function movies()
 	{
 		$this->load->view("{$this->theme}/{$this->viewFolder}/movie-page");
