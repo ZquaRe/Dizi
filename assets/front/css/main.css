@@ -1,9 +1,9 @@
 /*----------------------------------------
 [Master Stylesheet]
 
-Project:	FlixGo
-Version:	1.0
-Primary use:	FlixGo Template
+Project:  FlixGo
+Version:  1.1
+Primary use:  FlixGo Template
 ----------------------------------------*/
 /*----------------------------------------
 [Table of contents]
@@ -26,17 +26,18 @@ Primary use:	FlixGo Template
 16. Comments
 17. Reviews
 18. Form
-19.	Gallery
+19. Gallery
 20. Accordion
 21. Footer
 22. Sign
 23. Page 404
-24. Plyr customization
-25. PhotoSwipe customization
-26. mCustomScrollbar customization
+24. Profile
+25. Plyr customization
+26. PhotoSwipe customization
+27. mCustomScrollbar customization
 ----------------------------------------*/
 /*==============================
-	Common styles
+  Common styles
 ==============================*/
 html {
   -webkit-text-size-adjust: 100%;
@@ -213,7 +214,7 @@ ul {
   pointer-events: auto;
 }
 /*==============================
-	Header
+  Header
 ==============================*/
 .header {
   display: block;
@@ -231,11 +232,11 @@ ul {
   height: 70px;
   padding: 0 15px;
   background-color: #28282d;
-  width: 140px;
+  width: 110px;
 }
 .header__logo img {
-  width: auto;
-  max-width: 110px;
+  width: 100%;
+  max-width: 100px;
   display: block;
 }
 .header__logo:hover {
@@ -252,11 +253,11 @@ ul {
   bottom: 0;
   background-color: #2b2b31;
   z-index: 99;
-  width: 260px;
+  width: 305px;
   padding: 30px 30px 0;
-  -webkit-transform: translate3d(260px, 0, 0);
-  -moz-transform: translate3d(260px, 0, 0);
-  transform: translate3d(260px, 0, 0);
+  -webkit-transform: translate3d(305px, 0, 0);
+  -moz-transform: translate3d(305px, 0, 0);
+  transform: translate3d(305px, 0, 0);
   -webkit-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -544,13 +545,79 @@ ul {
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+.header__lang {
+  position: relative;
+  margin-left: 20px;
+}
+.header__lang .header__dropdown-menu {
+  min-width: 122px;
+  margin-top: -10px;
+}
+.header__lang .header__dropdown-menu.show {
+  margin-top: 0;
+}
+.header__lang .header__nav-link {
+  line-height: 70px;
+  display: block;
+}
+@media (min-width: 360px) {
+  .header__logo {
+    width: 140px;
+  }
+  .header__nav {
+    width: 235px;
+    -webkit-transform: translate3d(235px, 0, 0);
+    -moz-transform: translate3d(235px, 0, 0);
+    transform: translate3d(235px, 0, 0);
+  }
+  .header__nav--active {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media (min-width: 375px) {
+  .header__nav {
+    width: 250px;
+    -webkit-transform: translate3d(250px, 0, 0);
+    -moz-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0);
+  }
+  .header__nav--active {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media (min-width: 414px) {
+  .header__nav {
+    width: 259px;
+    -webkit-transform: translate3d(259px, 0, 0);
+    -moz-transform: translate3d(259px, 0, 0);
+    transform: translate3d(259px, 0, 0);
+  }
+  .header__nav--active {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 @media (min-width: 576px) {
   .header__logo {
-    width: 170px;
-    padding: 0 20px;
+    width: 150px;
   }
   .header__logo img {
-    max-width: 130px;
+    max-width: 120px;
+  }
+  .header__sign-in,
+  .header__lang {
+    margin-left: 30px;
+  }
+  .header__auth {
+    margin-right: 54px;
+  }
+  .header__lang .header__dropdown-menu {
+    min-width: 142px;
   }
 }
 @media (min-width: 768px) {
@@ -559,11 +626,11 @@ ul {
   }
   .header__logo {
     height: 90px;
-    width: 240px;
+    width: 210px;
     padding: 0;
   }
   .header__logo img {
-    max-width: 172px;
+    max-width: 127px;
   }
   .header__auth {
     margin-right: 54px;
@@ -589,6 +656,15 @@ ul {
   }
   .header__nav {
     top: 90px;
+    width: 260px;
+    -webkit-transform: translate3d(260px, 0, 0);
+    -moz-transform: translate3d(260px, 0, 0);
+    transform: translate3d(260px, 0, 0);
+  }
+  .header__nav--active {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   .header__search-content input {
     padding: 0 130px 0 20px;
@@ -596,8 +672,14 @@ ul {
   .header__search-content button {
     right: 20px;
   }
+  .header__lang .header__nav-link {
+    line-height: 90px;
+  }
 }
 @media (min-width: 1200px) {
+  .header__logo {
+    width: 240px;
+  }
   .header__sign-in {
     margin-left: 45px;
   }
@@ -620,7 +702,7 @@ ul {
     top: auto;
     right: auto;
     bottom: auto;
-    margin-left: 45px;
+    margin-left: 50px;
   }
   .header__nav:before {
     display: none;
@@ -671,9 +753,12 @@ ul {
   .header__dropdown-menu.show {
     margin-top: 0;
   }
+  .header__lang {
+    margin-left: 35px;
+  }
 }
 /*==============================
-	Home
+  Home
 ==============================*/
 .home {
   margin-top: 70px;
@@ -681,6 +766,7 @@ ul {
   display: block;
   background-color: #2b2b31;
   padding: 40px 0;
+  overflow: hidden;
 }
 .home .container {
   position: relative;
@@ -749,7 +835,7 @@ ul {
   bottom: 0;
   left: 0;
   display: block;
- /* background: url("../img/home/home__bg.jpg") no-repeat center/cover;*/
+  background: url("../img/home/home__bg.jpg") no-repeat center/cover;
   opacity: 0.06;
 }
 @media (min-width: 576px) {
@@ -778,7 +864,7 @@ ul {
   }
 }
 /*==============================
-	Content
+  Content
 ==============================*/
 .content {
   padding: 0 0 20px;
@@ -805,6 +891,9 @@ ul {
   -webkit-box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
   box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
 }
+.content__head--profile:before {
+  display: none;
+}
 .content__title {
   color: #fff;
   font-weight: 300;
@@ -816,6 +905,9 @@ ul {
 }
 .content__mobile-tabs {
   position: relative;
+}
+.content__mobile-tabs--profile {
+  margin-bottom: -20px;
 }
 .content__mobile-tabs-btn {
   display: flex;
@@ -1006,8 +1098,14 @@ ul {
     -webkit-box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
     box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
   }
+  .content__tabs--profile {
+    display: none;
+  }
   .content__mobile-tabs {
     display: none;
+  }
+  .content__mobile-tabs--profile {
+    display: block;
   }
 }
 @media (min-width: 768px) {
@@ -1021,14 +1119,29 @@ ul {
   .content__head {
     margin-bottom: 50px;
   }
+  .content__tabs--profile {
+    display: flex;
+  }
+  .content__tabs--profile a {
+    line-height: 90px;
+  }
+  .content__mobile-tabs--profile {
+    display: none;
+  }
 }
 @media (min-width: 1200px) {
   .content__title {
     font-size: 36px;
   }
+  .content__tabs--profile li {
+    margin-right: 45px;
+  }
+  .content__tabs--profile li:last-child {
+    margin-right: 0;
+  }
 }
 /*==============================
-	Section
+  Section
 ==============================*/
 .section {
   padding: 40px 0;
@@ -1175,7 +1288,7 @@ ul {
   }
 }
 /*==============================
-	Breadcrumb
+  Breadcrumb
 ==============================*/
 .breadcrumb {
   display: flex;
@@ -1233,7 +1346,7 @@ ul {
   }
 }
 /*==============================
-	Card
+  Card
 ==============================*/
 .card {
   margin-bottom: 30px;
@@ -1610,7 +1723,7 @@ ul {
   }
 }
 /*==============================
-	Details
+  Details
 ==============================*/
 .details {
   position: relative;
@@ -1778,7 +1891,7 @@ ul {
   }
 }
 /*==============================
-	FAQ
+  FAQ
 ==============================*/
 .faq {
   display: block;
@@ -1827,7 +1940,7 @@ ul {
   }
 }
 /*==============================
-	How
+  How
 ==============================*/
 .how {
   display: block;
@@ -1867,7 +1980,7 @@ ul {
   }
 }
 /*==============================
-	Partners
+  Partners
 ==============================*/
 .partner {
   display: block;
@@ -1891,7 +2004,7 @@ ul {
   }
 }
 /*==============================
-	Price
+  Price
 ==============================*/
 .price {
   display: flex;
@@ -1925,6 +2038,9 @@ ul {
   background-image: -webkit-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
   background-image: -ms-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
   background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+}
+.price--profile {
+  margin: 0 0 30px;
 }
 .price__item {
   display: flex;
@@ -2011,6 +2127,11 @@ ul {
     margin-top: 25px;
   }
 }
+@media (min-width: 990px) {
+  .price--profile {
+    margin: 0 0 50px;
+  }
+}
 @media (min-width: 1200px) {
   .price {
     padding: 25px;
@@ -2048,7 +2169,7 @@ ul {
   }
 }
 /*==============================
-	Feature
+  Feature
 ==============================*/
 .feature {
   display: block;
@@ -2092,7 +2213,7 @@ ul {
   }
 }
 /*==============================
-	Catalog
+  Catalog
 ==============================*/
 .catalog {
   padding: 0 0 20px;
@@ -2103,7 +2224,7 @@ ul {
   }
 }
 /*==============================
-	Filter
+  Filter
 ==============================*/
 .filter {
   background-color: #28282d;
@@ -2403,7 +2524,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   right: -8px;
 }
 /*==============================
-	Paginator
+  Paginator
 ==============================*/
 .paginator {
   display: flex;
@@ -2482,7 +2603,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 }
 /*==============================
-	Comments
+  Comments
 ==============================*/
 .comments {
   margin-bottom: 50px;
@@ -2657,10 +2778,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 @media (min-width: 992px) {
   .comments {
     margin-bottom: 45px;
+    padding-right: 20px;
   }
 }
 /*==============================
-	Reviews
+  Reviews
 ==============================*/
 .reviews {
   margin-bottom: 40px;
@@ -2743,10 +2865,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 @media (min-width: 992px) {
   .reviews {
     margin-bottom: 30px;
+    padding-right: 20px;
   }
 }
 /*==============================
-	Form
+  Form
 ==============================*/
 .form {
   background-color: #28282d;
@@ -2842,7 +2965,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 500;
 }
 /*==============================
-	Gallery
+  Gallery
 ==============================*/
 .gallery {
   margin-bottom: 20px;
@@ -2867,10 +2990,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 @media (min-width: 992px) {
   .gallery {
     margin-bottom: 35px;
+    padding-right: 20px;
   }
 }
 /*==============================
-	Accordion
+  Accordion
 ==============================*/
 .accordion {
   background-color: #28282d;
@@ -2981,7 +3105,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 }
 /*==============================
-	Footer
+  Footer
 ==============================*/
 .footer {
   background-color: #28282d;
@@ -3169,7 +3293,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 }
 /*==============================
-	Sign
+  Sign
 ==============================*/
 .sign {
   display: block;
@@ -3375,7 +3499,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 }
 /*==============================
-	Page 404
+  Page 404
 ==============================*/
 .page-404 {
   display: block;
@@ -3475,7 +3599,218 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 }
 /*==============================
-	Plyr customization
+  Profile
+==============================*/
+.profile {
+  background-color: #28282d;
+  -webkit-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 5px 25px 0 rgba(0,0,0,0.3);
+  margin-bottom: 30px;
+}
+.profile__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+.profile__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.profile__meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.profile__meta h3 {
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.profile__meta span {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+}
+.profile__avatar {
+  display: block;
+  position: relative;
+  width: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.profile__avatar img {
+  width: 100%;
+}
+.profile__logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.05);
+  -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+.profile__logout:hover {
+  opacity: 1;
+  color: #fff;
+}
+.profile__logout span {
+  display: none;
+}
+.profile__logout i {
+  color: #fff;
+  font-size: 24px;
+}
+.profile__form {
+  background-color: #28282d;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+.profile__title {
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.profile__group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.profile__label {
+  letter-spacing: 0.2px;
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(255,255,255,0.75);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.profile__input {
+  background-color: #2b2b31;
+  border: none;
+  height: 50px;
+  position: relative;
+  color: #fff;
+  font-size: 15px;
+  width: 100%;
+  color: #fff;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 0 20px;
+  letter-spacing: 0.2px;
+  font-family: 'Open Sans', sans-serif;
+}
+.profile__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-image: -moz-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+  background-image: -webkit-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+  background-image: -ms-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+  background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+  -webkit-box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
+  box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
+  opacity: 0.85;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 10px auto 0;
+}
+.profile__btn:hover {
+  opacity: 1;
+  color: #fff;
+}
+@media (min-width: 360px) {
+  .profile__form {
+    padding: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .profile {
+    margin-bottom: 50px;
+  }
+  .profile__content {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    height: 90px;
+  }
+  .profile__user {
+    width: 210px;
+    margin-bottom: 0;
+    margin-right: 35px;
+  }
+  .profile__logout {
+    margin-left: auto;
+    margin-top: 0;
+    height: 50px;
+    width: 140px;
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+  .profile__logout i {
+    display: none;
+  }
+  .profile__logout span {
+    display: block;
+  }
+  .profile__form {
+    padding: 30px 20px;
+    margin-bottom: 50px;
+  }
+  .profile__title {
+    margin-bottom: 25px;
+  }
+  .profile__btn {
+    width: 140px;
+    margin: 10px 0 0;
+  }
+}
+@media (min-width: 992px) {
+  .profile__form {
+    padding: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .profile__user {
+    width: 240px;
+    margin-right: 50px;
+  }
+}
+/*==============================
+  Plyr customization
 ==============================*/
 .plyr {
   font-family: 'Ubuntu', sans-serif;
@@ -3559,7 +3894,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   filter: none;
 }
 /*==============================
-	PhotoSwipe customization
+  PhotoSwipe customization
 ==============================*/
 .pswp__bg {
   background-color: rgba(43,43,49,0.8);
@@ -3641,7 +3976,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   content: '\f287';
 }
 /*==============================
-	mCustomScrollbar customization
+  mCustomScrollbar customization
 ==============================*/
 /* scroll bar 1 */
 .mCS-custom-bar {

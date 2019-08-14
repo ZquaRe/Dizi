@@ -15,8 +15,13 @@ class users extends CI_Controller {
     }
 
     public function index()
+    {
+        $this->load->view("{$this->theme}/{$this->viewFolder}/index");
+    }
+
+    public function profil()
 	{
-		$this->load->view("{$this->theme}/{$this->viewFolder}/index");
+		$this->load->view("{$this->theme}/{$this->viewFolder}/profil");
 	}
 
     public function login()
