@@ -66,6 +66,19 @@
 									<i class="icon ion-ios-search"></i>
 								</button>
 
+
+								<!-- dropdown -->
+								<div class="dropdown header__lang">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
+
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 70px, 0px);">
+										<li><a href="#">English</a></li>
+										<li><a href="#">Spanish</a></li>
+										<li><a href="#">Russian</a></li>
+									</ul>
+								</div>
+								<!-- end dropdown -->
+
 								<a href="signin.html" class="header__sign-in">
 									<i class="icon ion-ios-log-in"></i>
 									<span>sign in</span>
