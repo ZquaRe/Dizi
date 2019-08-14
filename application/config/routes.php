@@ -57,4 +57,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'users/login';
 $route['register'] = 'users/register';
 $route['profil'] = 'users/profil';
+$route['profil/(.+)'] = 'users/profil/$1';
 

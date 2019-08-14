@@ -3,8 +3,15 @@
 
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
-	 
+	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
+
 	<!-- CSS -->
+	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/fontawesome.min.css">
+	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/pure.min.css">
+	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/style.css">
 	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/owl.carousel.min.css">

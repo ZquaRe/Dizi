@@ -6,7 +6,7 @@
 					<div class="col-12">
 						<div class="header__content">
 							<!-- header logo -->
-							<a href="index.html" class="header__logo">
+							<a href="<?php echo base_url();?>" class="header__logo">
 								<img src="<?php echo base_url("assets/{$this->theme}/");?>img/logo.svg" alt="">
 							</a>
 							<!-- end header logo -->

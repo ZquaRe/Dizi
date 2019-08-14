@@ -1,0 +1,51 @@
+ 
+.margin5
+{
+    margin-bottom:5px; 
+}
+.float-right
+{
+    float:right;
+}
+
+.btn-size-sm
+{
+    font-size: 85%;
+}
+.button-dark {
+    background: rgb(47, 54, 64);
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.alert
+{
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+    margin-top:5px;
+    border-radius: 4px;
+    
+}
+.alert.alert-danger{
+    background: rgb(250, 55, 72);
+}
+.alert.alert-warning{
+    background: rgb(238, 90, 36);
+}
+.alert.alert-success{
+    background: rgb(0, 148, 50);
+}
+.alert.alert-gradient {
+    background: rgb(88,81,219);
+    background: linear-gradient(90deg, rgba(88,81,219,1) 0%, rgba(131,58,180,1) 63%);
+}
+
+.alert.fsize{
+    font-size: 110%;
+}
+
+  

@@ -47,7 +47,7 @@
 								</div>
 								<div class="profile__meta">
 									<h3>Username</h3>
-									<span>FlixGo ID: 23562</span>
+									<span>FlixGo ID: <?php    echo $this->uri->segment(2); ?></span>
 								</div>
 							</div>
 

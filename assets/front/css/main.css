@@ -4046,3 +4046,74 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-image: -ms-linear-gradient(180deg, #ff55a5 0%, #ff5860 100%);
   background-image: linear-gradient(180deg, #ff55a5 0%, #ff5860 100%);
 }
+
+
+
+/* FILM BUTTON */
+.film__watch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #171920;
+    text-transform: uppercase;
+    font-family: 'FSElliotPro-Heavy';
+    height: 52px;
+    left: 0;
+    width: 100%;
+    background-color: #ffd200;
+    position: absolute;
+    top: 100%
+}
+.film:hover .film__watch.premiere {
+    -webkit-transform: translateY(-118px);
+    -moz-transform: translateY(-118px);
+    transform: translateY(-118px)
+}
+.film__watch svg {
+    fill: #171920;
+    fill-rule: evenodd;
+    margin-left: 10px
+}
+.film__watch:hover {
+    color: #171920;
+    background-color: #ffb400
+}
+.film:hover .film__watch {
+    -webkit-transform: translateY(-52px);
+    -moz-transform: translateY(-52px);
+    transform: translateY(-52px)
+}
+@media (min-width:360px) {
+    .film__watch {
+        font-size: 14px;
+        letter-spacing: 0.3px
+    }
+}
+@media (min-width:576px) {
+    .film__cover {
+        height: 228px
+    }
+}
+@media (min-width:768px) {
+    .film__cover {
+        height: 318px
+    }
+}
+@media (min-width:1200px) {
+    .film__cover {
+        height: 250px
+    }
+    
+    .film:hover+.popover {
+        display: block;
+        width: 540px;
+        padding: 25px 30px
+    }
+}
+@media (min-width:1360px) {
+    .film__cover {
+        height: 284px
+    }
+} 

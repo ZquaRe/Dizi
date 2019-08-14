@@ -18,5 +18,6 @@ class dashboard extends CI_Controller {
 	{
 		$this->load->view("{$this->theme}/{$this->viewFolder}/index");
 	}
+ 
 
 }
