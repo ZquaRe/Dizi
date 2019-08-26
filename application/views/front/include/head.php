@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/photoswipe.css">
 	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/default-skin.css">
 	<link rel="stylesheet" href="<?php echo base_url("assets/{$this->theme}/");?>css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 
 	<!-- Favicons -->
 	<link rel="icon" type="image/png" href="<?php echo base_url("assets/{$this->theme}/");?>icon/favicon-32x32.png" sizes="32x32">
