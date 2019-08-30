@@ -67,7 +67,7 @@
 								</button>
 
 
-								<!-- dropdown -->
+								<!-- Profile -->
 								<div class="dropdown header__lang">
 									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
 
@@ -77,12 +77,28 @@
 										<li><a href="#">Russian</a></li>
 									</ul>
 								</div>
-								<!-- end dropdown -->
+								<!-- end profile -->
 
-								<a href="signin.html" class="header__sign-in">
+
+<?php         if($this->session->UserLogin['isLogin']) { ?>
+								<!-- Profile -->
+								<div class="dropdown header__lang">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $this->session->UserLogin['Username']; ?></a>
+
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLang" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 70px, 0px);">
+										<li><a href="<?php echo base_url('profil/'.$this->session->UserLogin['Username']);?>">Profil</a></li>
+										<li><a href="#">Spanish</a></li>
+										<li><a href="#">Russian</a></li>
+									</ul>
+								</div>
+								<!-- end profile -->
+<?php
+} else{ ?>  
+								<a href="<?php echo base_url('/login'); ?>" class="header__sign-in">
 									<i class="icon ion-ios-log-in"></i>
-									<span>sign in</span>
+									<span>Oturum Aç</span>
 								</a>
+								<?php } ?>
 							</div>
 							<!-- end header auth -->
 

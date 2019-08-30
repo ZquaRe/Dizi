@@ -3,8 +3,8 @@
 
 <head>
     <?php $this->load->view("{$this->theme}/include/head"); ?>
-    <title><?php echo $UserInformation->Name . ' ' . $UserInformation->Surname; ?> |
-        (@<?php echo $this->uri->segment(2); ?>)</title>
+    <title>
+        <?php echo $this->uri->segment(2); ?> Profili</title>
 
 </head>
 <body class="body">
@@ -19,7 +19,7 @@
             <div class="col-12">
                 <div class="section__wrap">
                     <!-- section title -->
-                    <h2 class="section__title">@<?php echo $this->uri->segment(2); ?></h2>
+                    <?php /*<h2 class="section__title">@<?php echo $this->uri->segment(2); ?></h2> */ ?>
                     <!-- end section title -->
 
                     <!-- breadcrumb -->
@@ -49,7 +49,7 @@
                                 <img src="<?php echo base_url("assets/{$this->theme}/"); ?>img/user.png" alt="">
                             </div>
                             <div class="profile__meta">
-                                <h3><?php echo $UserInformation->Name . ' ' . $UserInformation->Surname; ?></h3>
+                                <h3><?php //echo $UserInformation->Name . ' ' . $UserInformation->Surname; ?><?php echo $this->uri->segment(2); ?></h3>
                                 <span>Katılma Tarihi: <br><?php echo $UserInformation->RegisterDate; ?></span>
                             </div>
                         </div>

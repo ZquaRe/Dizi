@@ -20,7 +20,7 @@ class UsersModel extends CI_Model
     // Kullanıcı Profil Bilgileri
     public function getUserProfile($Username)
     {
-        $User = $this->db->select('id,Username,Name,Surname,Avatar,RegisterDate')->where('Username', $Username)->get('users')->result();
+        $User = $this->db->select('id,Username,Avatar,RegisterDate')->where('Username', $Username)->get('users')->result();
         if ($User)
             return $User[0];
         else
@@ -39,13 +39,23 @@ class UsersModel extends CI_Model
         if (!$this->getUserProfile($Data['Username'])) {
             $Add = $this->AddUser(array(
                 'Username' => $Data['Username'],
-                'Name' => $Data['Name'],
-                'Surname' => $Data['Surname'],
                 'Mail' => $Data['Mail'],
                 'Password' => password_hash($Data['Password'], PASSWORD_DEFAULT)
                 //'Avatar' => ' '
             ));
             if ($Add) { return true; } else { return false; }
+        }
+    }
+
+    public function doLogin($Data = Array())
+    {
+        //Eğer kullanıcı adı sistemde kayıtlıysa işleme al
+        if ($this->getUserProfile($Data['Username'])) {
+
+            $User = $this->db->select('Username,Password')->where('Username', trim($Data['Username']))->get('users')->result();
+            if($User)
+            if (password_verify($Data['Password'], trim($User[0]->Password))) { return true; } else{ return false; }
+            else return false;
         }
     }
 
