@@ -46,6 +46,7 @@ class users extends CI_Controller
         $this->form_validation->set_rules('Username', 'Kullanıcı adı', 'trim|required');
         $this->form_validation->set_rules('Password', 'Şifre', 'trim|required');
         $this->form_validation->set_message('required', '<div class="alert alert-danger">%s alanı doldurulması gerekiyor.</div>');
+       
         if ($this->form_validation->run()) {
             $UserAdd = $this->UsersModel->doLogin(array('Username' => $this->input->post('Username'), 'Password' => $this->input->post('Password')));
             if($UserAdd){ 
@@ -59,7 +60,7 @@ class users extends CI_Controller
                 'LoginDate' => date('Y-m-d H:i:s'),
                 'isLogin' => 1
                 );
-                $this->session->set_userdata('LoginPost', $ProfilArray);
+                $this->session->set_userdata('UserLogin', $ProfilArray);
                 $this->session->unset_userdata('flashError');
                 $this->session->set_flashdata('flashSucces','Giriş başarılı, yönlendiriliyosunuz.');
                 $this->load->view("{$this->theme}/{$this->viewFolder}/login");
@@ -80,7 +81,6 @@ class users extends CI_Controller
         }
     }
        
-    $this->load->view("{$this->theme}/{$this->viewFolder}/login");
     }
 
     public function doLogin($Username,$Password)
