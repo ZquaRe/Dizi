@@ -13,7 +13,8 @@
             <div class="col-12">
                 <div class="sign__content">
                     <!-- registration form -->
-                    <form action="<?php echo base_url('users/register'); ?>" method="POST" class="sign__form">
+                    <?php //base_url('users/register'); ?>
+                    <form action="<?php echo base_url('register'); ?>" method="POST" class="sign__form">
                         <?php echo validation_errors(); ?>
                         <?php if ($this->session->flashError) echo ' <div class="alert alert-danger">' . $this->session->flashError . '</div>'; ?>
                         <a href="index.html" class="sign__logo">

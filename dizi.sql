@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 26 Ağu 2019, 02:58:41
+-- Üretim Zamanı: 01 Eki 2019, 13:30:55
 -- Sunucu sürümü: 10.1.38-MariaDB
 -- PHP Sürümü: 7.3.3
 
@@ -31,10 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `Username` varchar(100) NOT NULL,
-  `Name` varchar(100) NOT NULL,
-  `Surname` varchar(100) NOT NULL,
   `Mail` varchar(250) NOT NULL,
-  `Password` varchar(50) NOT NULL,
+  `Password` varchar(300) NOT NULL,
   `Avatar` text NOT NULL,
   `RegisterDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

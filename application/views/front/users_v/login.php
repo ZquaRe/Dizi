@@ -15,7 +15,8 @@
             <div class="col-12">
                 <div class="sign__content">
                     <!-- authorization form -->
-                    <form action="<?php echo base_url('users/login'); ?>" method="POST" class="sign__form">
+                    <?php //base_url('users/login'); ?>
+                    <form action="<?php echo base_url('login'); ?>" method="POST" class="sign__form">
                     <?php echo validation_errors(); ?>
                     <?php if ($this->session->flashError) echo ' <div class="alert alert-danger">' . $this->session->flashError . '</div>'; ?>
 
@@ -31,10 +32,10 @@
                             <input type="password" name="Password" class="sign__input" placeholder="Şifre">
                         </div>
                         <?php /*
-							<div class="sign__group sign__group--checkbox">
-								<input id="remember" name="remember" type="checkbox" checked="checked">
-								<label for="remember">Remember Me</label>
-							</div>
+                            <div class="sign__group sign__group--checkbox">
+                                <input id="remember" name="remember" type="checkbox" checked="checked">
+                                <label for="remember">Remember Me</label>
+                            </div>
                         */ ?>
                         <button class="sign__btn" type="submit" name="Sub">Oturum Aç</button>
 
